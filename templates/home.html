@@ -12,18 +12,24 @@
 
   <style>
     #banner {
-      height: 360px;
       width: 100%;
       object-fit:cover;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content:center
     }
   </style>
   
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src='https://13b58ea9-6529-4e46-98dd-eb04107e873b-00-1waydh35hsgs2.picard.replit.dev/static/banner.jpeg' height="320">
+    
     <div class="container">
-      <h1 class="text-center mt=2 mb-4">{{company_name}} Carrers</h1> <!-- Passando dynamic informatio into html templates. Converte o objeto jobs em uma string. -->
-      <img class="img-fluid" id="banner" src='https://13b58ea9-6529-4e46-98dd-eb04107e873b-00-1waydh35hsgs2.picard.replit.dev/static/banner.jpeg' height="320">
-      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+      <h1 class="text-center mt=2 mb-4">{{company_name}} Carrers</h1> <!-- Passando dynamic information into html templates. Converte o objeto jobs em uma string. -->
+      
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
       <p class="lead">
           Lorem ipsum dolor sit amet, 
         consectetur
@@ -34,6 +40,12 @@
         Lorem ipsum dolor sit amet, consectetur
         Lorem ipsum dolor sit amet, consectetur
       </p>
+        </div>
+        <div class="d-none d-m-block col-md-6">"
+        <img src="https://13b58ea9-6529-4e46-98dd-eb04107e873b-00-1waydh35hsgs2.picard.replit.dev/static/group.jpeg" style="height:320px;border-radius:4px">
+        </div>
+    </div>
+      
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
 
       <div>
@@ -43,9 +55,9 @@
       </div>
 
       <div class="text-center">
-      <button class="btn btn-primary btn-lg"">Contact Us</button> 
-          <p class="mt-4">Copyright 2022, Jovian</p>
+      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openigs&body=My%20name%3A%20%3Cyour%20name%20here%3E%0A%0AMy%20questions%3A%20%3Center%20question%20here%3E">Contact Us</a> 
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
